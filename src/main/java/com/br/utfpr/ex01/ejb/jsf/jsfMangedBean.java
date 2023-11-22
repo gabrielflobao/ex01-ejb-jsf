@@ -43,6 +43,19 @@ public class jsfMangedBean {
     }
     
     public void calculaPrimo() {
+        int numNatural = getN1();
+        int [] numNaturais = new int [8];
+        
+        for(int i = 0 ; i<numNaturais.length;i++) {
+            System.out.println("atribuição de i "+i);
+            System.out.println("atribuição de i somado com 1 "+(i+1));
+            if(numNatural != i+1) {
+                numNaturais[i] = 1+1; 
+            }
+            
+            for()
+           
+        }
         
     }
     
