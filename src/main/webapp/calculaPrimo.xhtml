@@ -6,7 +6,14 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:form>
+            <label>Digite um número:</label>
+            <h:inputText value="#{jsfMangedBean.n1}"></h:inputText>
+            <br></br>
+            <label>Próximo número primo :</label>
+            <h:outputText value="#{jsfMangedBean.n2}"></h:outputText>
+            <h:commandButton action="#{jsfMangedBean}">Salvar</h:commandButton>
+        </h:form>
     </h:body>
 </html>
 
