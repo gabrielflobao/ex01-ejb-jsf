@@ -42,5 +42,12 @@ public class jsfMangedBean {
         this.n2 = n2;
     }
     
+    public void calculaPrimo() {
+        
+    }
+    
+    public int calculaPrimoRecursive() {
+        return 1;
+    }
     
 }
