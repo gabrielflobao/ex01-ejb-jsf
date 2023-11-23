@@ -53,14 +53,24 @@ public class jsfMangedBean {
                 numNaturais[i] = 1+1; 
             }
             
-            for()
+            System.out.println(calculaPrimoRecursive(numNatural,numNaturais) );
            
         }
         
     }
     
-    public int calculaPrimoRecursive() {
-        return 1;
+    public int calculaPrimoRecursive(int num,int[]array) {
+        
+        for(int i = 0;i<array.length;i++) {
+            if(num%array[i] ==0) {
+                calculaPrimoRecursive(num+1,array);
+            }
+            
+            if(i == 7 && num%array[i]!=0){
+                return num;
+            }
+        }
+        return -1;
     }
     
 }
