@@ -44,18 +44,19 @@ public class jsfMangedBean {
     
     public void calculaPrimo() {
         int numNatural = getN1();
-        int [] numNaturais = new int [8];
-        
+        int [] numNaturais = new int [7];
+        int j = 2;
         for(int i = 0 ; i<numNaturais.length;i++) {
-            System.out.println("atribuição de i "+i);
-            System.out.println("atribuição de i somado com 1 "+(i+1));
-            if(numNatural != i+1) {
-                numNaturais[i] = 1+1; 
-            }
+            if(numNatural != j) {
+                numNaturais[i] = j; 
+                 j++;
             
-            System.out.println(calculaPrimoRecursive(numNatural,numNaturais) );
-           
+            } else {
+            numNaturais[i] = j+1; 
+               j = j+2;
+            }
         }
+         System.out.println(calculaPrimoRecursive(numNatural,numNaturais) );
         
     }
     
@@ -66,7 +67,7 @@ public class jsfMangedBean {
                 calculaPrimoRecursive(num+1,array);
             }
             
-            if(i == 7 && num%array[i]!=0){
+            if(num%array[6]!=0){
                 return num;
             }
         }
